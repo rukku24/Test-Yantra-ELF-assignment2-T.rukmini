@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+        <script src="converter.js"></script>
+        
+        <style>
+            .container{
+                margin-left: 30%;
+                margin-bottom: 60%;
+            }
+            .demo
+            {
+                margin-left: 30%;
+            }
+        </style>
+	</head>
+<body>
+	<div class="demo" >
+	<div class="col-md-3"></div>
+	<div class="col-md-6 well">
+		<h3 class="text-primary"  >Javascript - Simple Currency Converter</h3>
+		<hr style="border-top:1px dotted #ccc;">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<h4>Converter</h4>
+			<hr style="border-top:1px groovy #ccc;"/>
+			<div class="form-group">
+				<select onchange="Currency(); Calculate()" class="form-control" id="converter" style="width:30%;">
+					<option value="Dollar">Dollar</option>
+					<option value="Pound">Pound</option>
+					<option value="Euro">Euro</option>
+					<option value="ind">ind</option>
+					
+				</select>
+				
+				<input type="number" oninput="Calculate()" class="form-control" id="value1"/>
+			</div>
+			
+			<div class="form-group" ></div>
+				<label>show me result</label>
+				<input type="number" class="form-control" id="value2" disabled="disabled"/>
+			</div>
+		</div>
+    </div>
+</div>
+<br> <br>
+    
+<div class="container" >
+<title>Kilograms to Grams Weight Converter</title>
+
+
+<h2>Weight Converter</h2>
+<p>Type a value in the Kilograms field to convert the value to Grams:</p>
+
+<p>
+  <label>Kilograms</label>
+  <input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+</p>
+<p>Grams: <span id="outputGrams"></span></p>
+
+<script>
+function weightConverter(valNum) {
+  document.getElementById("outputGrams").innerHTML=valNum*1000;
+}
+</script>
+
+</div>
+
+    <script src="task2.js"></script>
+</body>
+</html>
